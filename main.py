@@ -3,12 +3,14 @@ import sys
 
 import pygame
 
+
 # Global variables
 SCREEN_WIDTH = 800
 SCREEN_HEIGHT = 600
 BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
 LINE_WIDTH = 12
+
 
 # Other variables
 current_player = 1
@@ -17,17 +19,6 @@ played_plus_last_round = [False, False, False]
 
 
 # Functions
-
-
-# https://stackoverflow.com/questions/31836104/pyinstaller-and-onefile-how-to-include-an-image-in-the-exe-file
-# get_path() Imported from link above, needed in order to use images for the standalone .exe
-def get_path(filename):
-    if hasattr(sys, "_MEIPASS"):
-        return os.path.join(sys._MEIPASS, filename)
-    else:
-        return filename
-
-
 # Draw the grid
 def DrawGrid():
     screen.fill(background)
@@ -130,7 +121,7 @@ pygame.init()
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 # Set the title of the window
 pygame.display.set_caption("TicTacToe +")
-pygame.display.set_icon(pygame.image.load(get_path("icon.png")))
+pygame.display.set_icon(pygame.image.load("icon.png"))
 
 game_board = \
     [
