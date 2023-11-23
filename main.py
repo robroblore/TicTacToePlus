@@ -11,7 +11,6 @@ WHITE = (255, 255, 255)
 LINE_WIDTH = 12
 
 # Other variables
-
 current_player = 1
 theme = 0
 
@@ -78,11 +77,13 @@ def HandleMouseClick(pos, board, player):
         return 1
 
     print(game_board)
+    CheckWin(board, player)
     return -1
 
 
 def CheckWin(board, player):
-    return
+    if board[0][0] == board[0][1] == board[0][2]:
+    	print(f"{player} won!")
 
 
 # Get the user's desired theme
@@ -122,7 +123,6 @@ while run:
 
     DrawGrid()
     DrawPlayers(game_board)
-    CheckWin(game_board, current_player*-1)
 
     # Handle events
     for event in pygame.event.get():
