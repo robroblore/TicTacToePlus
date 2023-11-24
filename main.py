@@ -1,6 +1,3 @@
-import os.path
-import sys
-
 import pygame
 
 
