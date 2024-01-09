@@ -1,7 +1,7 @@
 import pygame
 
 
-# Global variables
+# Constant variables
 SCREEN_WIDTH = 800
 SCREEN_HEIGHT = 600
 BLACK = (0, 0, 0)
@@ -99,14 +99,14 @@ def CheckWin(board, player):
 
 
 # Get the user's desired theme
-# theme = input("Enter theme (light/dark): ").lower()
-# while theme != "light" and theme != "dark" and theme != "l" and theme != "d":
-#     theme = input("Theme doesn't exist, please enter light(l) or dark(d): ").lower()
-#
-# if theme == "light" or theme == "l":
-#     theme = 1
-# else:
-#     theme = 0
+theme = input("Enter theme (light/dark): ").lower()
+while theme != "light" and theme != "dark" and theme != "l" and theme != "d":
+    theme = input("Theme doesn't exist, please enter light(l) or dark(d): ").lower()
+
+if theme == "light" or theme == "l":
+    theme = 1
+else:
+    theme = 0
 
 # Set the background and draw color according to the theme
 background = (255 * theme, 255 * theme, 255 * theme)
@@ -147,4 +147,3 @@ while run:
     pygame.display.update()
 
 pygame.quit()
-quit()
