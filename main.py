@@ -100,7 +100,7 @@ def CheckWin(board, player):
 
 # Get the user's desired theme
 theme = input("Enter theme (light/dark): ").lower()
-while theme != "light" and theme != "dark" and theme != "l" and theme != "d":
+while theme not in ["light", "dark", "l", "d"]:
     theme = input("Theme doesn't exist, please enter light(l) or dark(d): ").lower()
 
 if theme == "light" or theme == "l":
