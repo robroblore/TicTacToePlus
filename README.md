@@ -11,3 +11,7 @@ Mais je vous conseille de le garder car il est joli et j'ai beaucoup travaille d
 
 Voici egalement le lien de github si vous voulez voir la *progression* du code (cliquez sur "commits") :
 https://github.com/robroblore/TicTacToePlus
+
+Pour le fichier .tex si vous voulez le rouler sur Overleaf il faut changer le type du document de pdfLatex en XeLaTeX
+(Ouverz le fichier, cliquez sur menu, sous "Compiler" selectionez XeLaTeX)
+Ceci est necesaire car nous utilisons de packages qui ne fonctionnent pas sur pdfLatex
